@@ -6,21 +6,81 @@
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/style-text.css" rel="stylesheet" type="text/css"/>
-    <script> 
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <script src="/libs/jquery-3.7.0.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script type="text/javascript">
+        function zero_first_format(value)
+        {
+            if (value < 10)
+            {
+                value='0'+value;
+            }
+            return value;
+        }
+        function date_time()
+        {
+            var current_datetime = new Date();
+            var day = zero_first_format(current_datetime.getDate());
+            var month = zero_first_format(current_datetime.getMonth()+1);
+            var year = current_datetime.getFullYear();
+            var hours = zero_first_format(current_datetime.getHours());
+            var minutes = zero_first_format(current_datetime.getMinutes());
+            return day+"."+month+"."+year+" "+hours+":"+minutes;
+        }
+        setInterval(function () {
+            document.getElementById('current_date').innerHTML = date_time();
+        }, 1000);
     </script>
 </head>
 	
 <body>
-    <div class="content">   
+    <main class="main">
         <h2>Проекты</h2>
-        <div class="right-content">
-            <h1>Тестовый вариант</h1>
-            <p1>Возьму пониже</p1>
+        <div class="content">   
+            
+            <div class="left-content">
+                <h1>Сайт Energo Minor</h1>
+                <ul class="list">
+                    <li><a href="#block_idea">Описание идеи и основных функций для разработки</a></li>
+                    <li><a href="">Создание функциональной части</a></li>
+                    <li><a href="https://www.figma.com/proto/j2wr0QN9CWxCgghD9hIF2U/MinorEnergo?type=design&node-id=2-2&t=y7cv6WPxwlxwoNVs-6&starting-point-node-id=2%3A2&hide-ui=1" target="_blank">Разработка дизайн-макета</a></li>
+                    <li>Загрузка на хостинг</li>
+                    <li>Тестирование</li>
+                    <li>Реализация идеи</li>
+                </ul>
+            </div>
+            <div class="right-content">
+                <h1>Тестовый вариант</h1>
+                <p1>Возьму пониже</p1>
+            </div>
+            
         </div>
-        <div class="left-content">
-            <h1>Тестовый вариант</h1>
-            <p1>Возьму пониже</p1>
+
+        <div class="idea" id="block_idea">
+            <h1>Идея</h1>
+            <p>Описание с приколом</p>
         </div>
-    </div>
+    </main>
+
+    
+
+    
+    
+
+    <footer class="footer">
+        <div class="main-footer">
+            <div class="date" id="current_date"></div>
+            <div class="text-footer">
+                (c) Алексей "seewo1" Кожемякин
+            </div>
+            <img src="img/Saveboy.png" width="100" height="100" alt="Saveboy" class="my-logo">
+        </div>
+        
+    </footer>
+    
 </body>
 </html>
