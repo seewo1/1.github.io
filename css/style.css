@@ -1,11 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
+    height: 100%;
     scroll-behavior: smooth;
   }
 
 body {
+    width: 100%;
     background-color: rgb(255, 252, 234);
     margin: 0px;
     padding: 0px;
+    border: 5px dashed black;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -38,27 +48,75 @@ p1 {
 
 .right-content {
     text-align: center;
-    height: 400px;
-    width: 700px;
+    height: 100%;
+    min-height: 300px;
+    width: 100%;
     background-color: wheat;
 }
 
 .left-content {
     text-align: center;
-    height: 400px;
-    width: 700px;
+    height: 100%;
+    min-height: 300px;
+    width: 100%;
     background-color: rgb(179, 180, 245);
 }
 
-.content {
+.footer {
+    width: 100%;
+    padding: 0px;
+    margin: auto;
     height: 100%;
-    width: 1200px;
+    max-height: 150px;
+    width: 100%;
+    background-color: #2c1900;
+    justify-content: center;
+}
+
+.main-footer {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.text-footer {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    font-style: normal;
+    padding: auto;
+    color: aliceblue;
+    align-items: center;
+    display: flex;
+}
+
+.date {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    font-style: normal;
+    padding: auto;
+    color: aliceblue;
+    align-items: center;
+    display: flex;
+}
+
+.main {
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.content {
+    min-width: 70%;
+    max-width: 80%;
     margin: auto;
     margin-top: 40px;
     border: solid 1px black;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 ::selection {
@@ -98,55 +156,10 @@ a:hover {
     text-decoration-color: brown;
 }
 
-.footer {
-    display: flex;
-    height: 150px;
-    width: auto;
-    background-color: #2c1900;
-}
-
-.main {
-    width: 1200px;
-    padding: 0px;
-    margin: auto;
-    margin-bottom: 50px;
-}
-
-.text-footer {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 25px;
-    font-style: normal;
-    padding: auto;
-    color: aliceblue;
-    align-items: center;
-    display: flex;
-    margin-left: 20%;
-}
-
-.date {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 25px;
-    font-style: normal;
-    padding: auto;
-    color: aliceblue;
-    align-items: center;
-    display: flex;
-}
-
-.main-footer {
-    display: flex;
-    width: 1200px;
-    margin: auto;
-}
-
-.my-logo {
-    margin-left: auto;
-}
-
 .idea {
+    width: 80%;
+    margin: auto;
+    text-align: justify ;
     margin-top: 100px;
     margin-bottom: 100px;
-    margin-bottom: 1000px;
 }
