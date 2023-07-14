@@ -38,6 +38,8 @@
 </head>
 	
 <body>
+    
+
     <main class="main">
         <h2>Проекты</h2>
         <div class="content">   
